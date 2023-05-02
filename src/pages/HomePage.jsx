@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import apiService from "../app/apiService";
 import { DataGrid } from "@mui/x-data-grid";
 import { Container, Fab, IconButton, Pagination, Stack } from "@mui/material";
@@ -87,8 +87,8 @@ const HomePage = () => {
 
   const getData = useCallback(async () => {
     const res = await apiService.get(`/cars?page=${page}`);
-    setCars(res.data.cars);
-    setTotalPages(res.data.total);
+    setCars(res.cars);
+    setTotalPages(res.count);
   }, [page]);
 
   useEffect(() => {
