@@ -1,12 +1,11 @@
-import { Typography } from '@mui/material';
-import React from 'react';
+import { Typography } from "@mui/material";
 
 const Copyright = () => {
 	return (
 		<Typography variant="body2" color="textSecondary" align="center">
-			{'Copyright © '}
+			{"Copyright © "}
 			CoderSchool {new Date().getFullYear()}
-			{'.'}
+			{"."}
 		</Typography>
 	);
 };
